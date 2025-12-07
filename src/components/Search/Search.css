@@ -1,0 +1,98 @@
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute; /* float inside map-section */
+  top: 20px;          /* adjust distance from top of map */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.search-inner {
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 12px 0 0 12px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form button {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 0 0 12px 12px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+  z-index: 1000;
+  margin-top: 2px;
+  padding: 0;
+}
+
+.suggestion-item {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  .search-inner {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .search-container {
+    top: 15px;
+    padding: 0 10px;
+  }
+}

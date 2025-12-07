@@ -1,0 +1,116 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+
+  /* Remove any line or shadow */
+  box-shadow: none;   /* Remove shadow */
+  border: none;       /* Remove any border */
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.planoraLogo {
+  width: clamp(80px, 10vw, 120px);
+  height: auto;
+}
+
+/* Links container */
+.navbar-links {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  flex: 1;                  /* take remaining space between logo and hamburger */
+}
+
+.navbar-links a {
+  position: relative;        /* for hover effect */
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Hover underline shadow effect */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;              /* slightly below text */
+  width: 0%;
+  height: 3px;
+  background-color: #06c; /* blue shadow/underline */
+  box-shadow: 0 0 5px #06c;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none; /* show only on mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #06c;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger toggle animation */
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .navbar-links.active {
+    max-height: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .navbar-links a {
+    margin: 10px 20px;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

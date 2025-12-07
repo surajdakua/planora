@@ -1,0 +1,2 @@
+# planora
+Planora is a platform for travel ideas and route planning insights.

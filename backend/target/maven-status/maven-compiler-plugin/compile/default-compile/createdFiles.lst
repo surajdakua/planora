@@ -1,0 +1,3 @@
+com/puppet/demo/DemoApplication.class
+com/puppet/demo/controller/AuthController.class
+com/puppet/demo/config/SecurityConfig.class

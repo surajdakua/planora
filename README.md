@@ -31,8 +31,14 @@ Planora is an interactive navigation-based web application designed to help user
 
 Planora currently includes the **core navigation experience**:  
 ✔ Map interface  
+<img width="1605" height="875" alt="Map" src="https://github.com/user-attachments/assets/818f9d50-0d46-47e3-afa4-04bdc8043925" />
+
 ✔ Path-finding functionality  
+<img width="1435" height="911" alt="pathFinder" src="https://github.com/user-attachments/assets/25fb63ef-562b-4d43-a283-0b3d3a77cdf6" />
+
 ✔ Contact support flow  
+<img width="809" height="580" alt="contact" src="https://github.com/user-attachments/assets/ab755ec1-47db-4d71-a989-7d8809e2b90e" />
+
 
 Upcoming improvements:  
 🔹 User authentication  

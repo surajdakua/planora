@@ -39,6 +39,8 @@ Planora currently includes the **core navigation experience**:
 ✔ Contact support flow  
 <img width="809" height="580" alt="contact" src="https://github.com/user-attachments/assets/ab755ec1-47db-4d71-a989-7d8809e2b90e" />
 
+✔ Sample email
+<img width="1125" height="551" alt="email" src="https://github.com/user-attachments/assets/4b03b557-0c2c-48db-a0c2-a8601797fd8f" />
 
 Upcoming improvements:  
 🔹 User authentication  
